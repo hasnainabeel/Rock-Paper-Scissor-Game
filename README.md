@@ -1,2 +1,2 @@
 # Rock-Paper-Scissor-Game
-My first project
+Rock paper scissor the same game played between two persons is automated to be played with the computer using python.;)

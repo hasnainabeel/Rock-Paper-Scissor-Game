@@ -5,3 +5,8 @@ Rock paper scissor the same game played between two persons is automated to be p
 ```
 pip install -r requirements.txt
 ```
+
+### Play RPS game
+```
+python RPS.py
+```

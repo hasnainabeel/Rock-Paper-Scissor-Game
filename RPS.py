@@ -1,4 +1,27 @@
 import random
+import inquirer
+
+
+GAME_CHOICE = [
+  inquirer.List('answer',
+                message="Choose your choice ..",
+                choices=['ROCK', 'PAPER', 'SCISSORS', '', 'QUIT'],
+            ),
+]
+
+PLAY_AGAIN = [
+  inquirer.List('answer',
+                message="Do you want to play again?",
+                choices=['YES', 'NO'],
+            ),
+]
+
+GAME_CHOICE_VALUE = {
+  "ROCK" : 'r',
+  "PAPER" : "p",
+  "SCISSORS" : "r",
+  "QUIT" : "q"
+}
 
 print("*****Rock Paper Scissors*****\nInitial score given is 5 to both player and computer\nEnter 'Q' anytime to exit\n")
 
@@ -13,7 +36,11 @@ def start():
         comp = random.choice(car)
         # print(comp)
 
-        person = input(f"R :: ROCK\nP :: PAPER\nS :: SCISSORS\n\n->").lower()
+        # person = input(f"R :: ROCK\nP :: PAPER\nS :: SCISSORS\n\n->").lower()
+ 
+        answers = inquirer.prompt(GAME_CHOICE)
+        person = GAME_CHOICE_VALUE.get(answers["answer"])
+
         if person == "q":
             print("\nThanks for playing")
             exit()
@@ -55,8 +82,11 @@ def start():
         print(f"You Won the game!!\nYour score :: {player_score}\nComputer score :: {computer_score}\n")
     elif computer_score == player_score:
         print(f"Game is draw!!\nYour score :: {player_score}\nComputer score :: {computer_score}\n")
-    again = input("Do you want to play again?\nY :: Yes\nN :: No\n").lower()
-    if (again == "y"):
+
+    # again = input("Do you want to play again?\nY :: Yes\nN :: No\n").lower()
+    again = inquirer.prompt(PLAY_AGAIN)
+
+    if (again["answer"] == "YES"):
         start()
     else:
         print("\nThanks For playing")

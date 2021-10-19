@@ -3,7 +3,7 @@ Rock paper scissor the same game played between two persons is automated to be p
 
 ### SETUP
 ```
-pip install -r requirements.txt
+pip install inquirer
 ```
 
 ### Play RPS game

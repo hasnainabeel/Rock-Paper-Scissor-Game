@@ -78,17 +78,17 @@ def game():
         #     draw += 1
         #     i -= 1
         elif person == "r" and comp == "r":
-            print(f"{rock}\nComputer chose: {rock}\nYou Lost the round\n")
+            print(f"{rock}\nComputer chose: {rock}\nIt was a Tie\n")
             print("Its a Tie\n")
             draw += 1
             i -= 1
         elif person == "p" and comp == "p":
-            print(f"{paper}\nComputer chose: {paper}\nYou Lost the round\n")
+            print(f"{paper}\nComputer chose: {paper}\nIt was a Tie\n")
             print("Its a Tie\n")
             draw += 1
             i -= 1
         elif person == "s" and comp == "s":
-            print(f"{scissor}\nComputer chose: {scissor}\nYou Lost the round\n")
+            print(f"{scissor}\nComputer chose: {scissor}\nIt was a Tie\n")
             print("Its a Tie\n")
             draw += 1
             i -= 1
